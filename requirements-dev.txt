@@ -1,0 +1,7 @@
+# To check b64s's static typing information, as used by my test program.
+mypy
+pyright
+
+# Style checkers to to find bugs in my test program itself.
+flake8
+pylint

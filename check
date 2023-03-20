@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -eu
+
+python3.11 -m venv .venv
+. .venv/bin/activate
+python -m pip install --user --upgrade pip setuptools wheel
+pip install -r requirements.txt
+./program.py
+pip install -r requirements-dev.txt
+flake8 program.py
+pylint program.py
+mypy program.py
+pyright program.py

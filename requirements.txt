@@ -1,0 +1,3 @@
+# The b64s package that we are testing.
+--extra-index-url https://test.pypi.org/simple/
+b64s
