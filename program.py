@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Simple test program to ensure the b64s wheel works and type-checks."""
 
 import enum
@@ -21,9 +23,9 @@ def main() -> Status:
     print(f'{coded = }')
     roundtrip = b64s.decode(coded)
     print(f'{roundtrip = }')
-    ok = roundtrip == plain
-    print(f'{ok = }')
-    return Status.SUCCESS if ok else Status.FAILURE
+    roundtrip_ok = roundtrip == plain
+    print(f'{roundtrip_ok = }')
+    return Status.SUCCESS if roundtrip_ok else Status.FAILURE
 
 
 if __name__ == '__main__':

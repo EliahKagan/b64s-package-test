@@ -1,10 +1,11 @@
 #!/bin/sh
 
-set -eu
+set -eux
 
+rm -rf .venv
 python3.11 -m venv .venv
 . .venv/bin/activate
-python -m pip install --user --upgrade pip setuptools wheel
+python -m pip install -U pip setuptools wheel
 pip install -r requirements.txt
 ./program.py
 pip install -r requirements-dev.txt
@@ -12,3 +13,4 @@ flake8 program.py
 pylint program.py
 mypy program.py
 pyright program.py
+printf 'Everything looks good!\n'
