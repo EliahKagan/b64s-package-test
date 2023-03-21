@@ -1,4 +1,4 @@
-name: Check whitespace
+name: Whitespace
 
 on: [push, pull_request]
 

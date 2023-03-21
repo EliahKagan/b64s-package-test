@@ -1,4 +1,4 @@
-name: Check
+name: Check Python
 
 on: [push, pull_request]
 
@@ -15,5 +15,5 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Check wheel and test scripts
+      - name: Check wheel and runner program
         run: ./check
