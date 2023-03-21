@@ -14,3 +14,15 @@ wheels. This repository contains neither `b64s` nor its actual unit tests.
 Like `b64s` itself, this is [dedicated to the public
 domain](https://creativecommons.org/publicdomain/zero/1.0/). See
 [**`COPYING`**](COPYING).
+
+## Usage
+
+If for some reason you want to run this, it’s:
+
+```sh
+git clone https://github.com/EliahKagan/b64s-package-test.git
+cd b64s-package-test
+./check
+```
+
+Python 3.11 on a Unix-like system is assumed.
