@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# SPDX-License-Identifier: CC0-1.0
 
 """Simple test program to ensure the b64s wheel works and type-checks."""
 
