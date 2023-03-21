@@ -5,7 +5,10 @@ set -eux
 
 rm -rf .venv
 python3.11 -m venv .venv
-. .venv/bin/activate  # shellcheck disable=SC1091  # Don't scan "activate".
+
+# shellcheck disable=SC1091  # Don't scan "activate".
+. .venv/bin/activate
+
 python -m pip install -U pip setuptools wheel
 pip install -r requirements.txt
 ./program.py
