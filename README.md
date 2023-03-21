@@ -7,7 +7,7 @@ for me to check my work when I try out new tools for building and uploading
 wheels. This repository contains neither `b64s` nor its actual unit tests.
 
 *If you found this by searching, you're probably looking for
-[b64s](https://github.com/EliahKagan/b64s) instead.*
+[**b64s**](https://github.com/EliahKagan/b64s) instead.*
 
 ## License
 
