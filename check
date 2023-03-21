@@ -3,18 +3,32 @@
 
 set -eux
 
+# Create a fresh virtual environment.
 rm -rf .venv
 python3.11 -m venv .venv
 
+# Activate the virtual environment.
 # shellcheck disable=SC1091  # Don't scan "activate".
 . .venv/bin/activate
 
+# Install the wheel we are checking.
 python -m pip install -U pip setuptools wheel
 pip install -r requirements.txt
+
+# Run the test program to make sure the wheel is usable at runtime.
 ./program.py
+
+# Install tools for scanning Python code. (This is done now, instead of
+# earlier, so we are more likely to discover missing dependencies above.)
 pip install -r requirements-dev.txt
+
+# Scan the test program, discovering style problems and possible bugs.
 flake8 program.py
 pylint program.py
+
+# Typecheck the test program, using the wheel's type hints.
+# TODO: It would be best also to check that an actual type error is found.
 mypy program.py
 pyright program.py
+
 printf 'Everything looks good!\n'
